@@ -9,28 +9,85 @@
 </head>
 <body>
     
-    <header class="header__nav">
-
+    <header class="header">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="index.html">
-                    <img src="build/img/logo.svg" alt="logotipo de bienes raices">
+                <a href="/">
+                    <img src="build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
-                
-                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-            </div>
-        </div>
 
+                <div class="mobile-menu">
+                    <img src="build/img/barras.svg" alt="icono menu responsive">
+                </div>
+
+                <div class="derecha">
+                    <img class="dark-mode-boton" src="build/img/dark-mode.svg">
+                    <nav class="navegacion">
+                        <a href="nosotros.html">Nosotros</a>
+                        <a href="anuncios.html">Anuncios</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contacto.html">Contacto</a>
+                    </nav>
+                </div>
+                
+            </div> <!--.barra-->
+        </div>
     </header>
 
     <main class="contenedor">
-        <h1>Nosotros</h1>
+        <h1>Conoce mas sobre nosotros</h1>
+
+        <div class="contenido-nosotros">
+            <div class="imagen">
+                <picture>
+                    <source srcset="build/img/nosotros.webp" type="image/webp">
+                    <source srcset="build/img/nosotros.jpg" type="image/jpeg">
+                    <img src="build/img/nosotros.jpg" alt="blog" loading="lazy">
+                </picture>
+            </div>
+
+            <div class="texto-nosotros">
+                <blockquote>
+                    25 años de experiencia
+                </blockquote>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi rem impedit adipisci porro hic! Voluptates voluptatibus quasi quibusdam, aliquam dignissimos nam maxime eum aperiam accusamus, magnam, laudantium placeat qui quidem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam corporis ipsam blanditiis est odio ea nobis quo consequatur suscipit repellendus, iusto distinctio aut ullam officia similique corrupti, id doloribus repudiandae.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, ab assumenda, cum animi dolorem itaque similique non qui fuga aliquam iusto tempora deserunt. Eum mollitia atque ducimus consequatur, libero molestias?
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusantium quo suscipit qui, expedita consequuntur aut ipsum corrupti vitae? Nihil labore ipsa quisquam nobis in vero consectetur illum perferendis quas?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt nulla sunt vel recusandae. Suscipit a animi praesentium iste repellendus atque inventore! Delectus tempora ullam architecto non molestiae, quaerat nihil sequi?
+                </p>
+            </div>
+        </div>
     </main>
+
+    <section class="contenedor">
+        <h1>Más sobre nosotros</h1>
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="build/img/icono1.svg" alt="icono_seguridad" loading="lazy">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, libero vitae tenetur unde quisquam consectetur? Commodi tempore, perferendis minima porro cumque neque provident. Labore praesentium nulla autem minima et. Voluptate?</p>
+            </div>
+            
+            <div class="icono">
+                <img src="build/img/icono2.svg" alt="icono_precio" loading="lazy">
+                <h3>Precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, libero vitae tenetur unde quisquam consectetur? Commodi tempore, perferendis minima porro cumque neque provident. Labore praesentium nulla autem minima et. Voluptate?</p>
+            </div>
+
+            <div class="icono">
+                <img src="build/img/icono3.svg" alt="icono_seguridad" loading="lazy">
+                <h3>Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, libero vitae tenetur unde quisquam consectetur? Commodi tempore, perferendis minima porro cumque neque provident. Labore praesentium nulla autem minima et. Voluptate?</p>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer seccion">
         <div class="contenedor contenido-footer">
