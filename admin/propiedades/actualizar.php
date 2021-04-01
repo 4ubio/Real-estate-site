@@ -4,7 +4,7 @@
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     if(!$id) {
-        header('Locatiob: /admin');
+        header('Location: /admin');
     }
 
     //Importar la conexion
@@ -86,9 +86,36 @@
 
         if(empty($errores)){
 
+            //Subida de archivos
+
+            //Crear carpeta
+            $carpetaImagenes = '../../imagenes/';
+
+            if (!is_dir($carpetaImagenes)) {
+                mkdir($carpetaImagenes);
+            }
+
+            $nombreImagen = '';
+
+            /**Subida de archivos */
+
+            if ($imagen['name']) {
+                unlink($carpetaImagenes . $propiedad['imagen']);
+
+                //generar un nombre unico a la imagen
+                $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+
+                //Subir la imagen
+
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+            } else {
+                $nombreImagen = $propiedad['imagen'];
+            }
+
             //inserta en la base de datos
             $query = "UPDATE propiedades SET titulo = '${titulo}',
                     precio = '${precio}',
+                    imagen = '${nombreImagen}',
                     descripcion = '${descripcion}',
                     habitaciones = ${habitaciones},
                     wc = ${wc},
